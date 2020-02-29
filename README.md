@@ -1,4 +1,4 @@
-# What problem ecs-daemon-protector solve?
+# What problem does ecs-daemon-protector solve?
 
 When ecs instance set DRAINING, all tasks on the instance accept SIGTERM and will be stopped. If you run a log-router(such as fluentd) as DAEMON service, you hope to stop the log-router at last. But now, ECS cannot control order of termination for REPLICA and DAEMON. 
 
