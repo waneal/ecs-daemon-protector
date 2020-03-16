@@ -22,7 +22,7 @@ docker push ${ECR_REPO}/${IMAGE_NAME}:latest
 or you can pull from Docker Hub
 
 ```
-docker push iamwaneal/ecs-daemon-protector
+docker pull iamwaneal/ecs-daemon-protector
 ```
 
 ## Create task role for daemon-protector
