@@ -9,7 +9,7 @@ When ecs instance set DRAINING, all tasks on the instance accept SIGTERM and wil
 
 # How to use?
 
-## Build and push your repository
+## Build and push to your repository
 
 ```SHELL
 $(aws ecr get-login --no-include-email --region [YOUR_DEFAULT_REGION])
@@ -17,6 +17,12 @@ ECR_REPO=[YOUR_AWS_ACCOUNT_ID].dkr.ecr.ap-northeast-1.amazonaws.com
 IMAGE_NAME=ecs-daemon-protector
 docker build . 
 docker push ${ECR_REPO}/${IMAGE_NAME}:latest
+```
+
+or you can pull from Docker Hub
+
+```
+docker push iamwaneal/ecs-daemon-protector
 ```
 
 ## Create task role for daemon-protector
